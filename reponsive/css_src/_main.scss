@@ -160,6 +160,14 @@
 
   }
 
+  .list-visual-list-item{
+
+    &:nth-child(2){ width: 50%; }
+    &:nth-child(3),
+    &:nth-child(4),
+    &:nth-child(5){ width: 33.33%; }
+  }
+
 }
 
 // Smart Phone
@@ -252,6 +260,10 @@
       }
 
     }
+
+    &.on{
+      display: block;
+    }
   }
 
   .text-section {
@@ -267,6 +279,20 @@
       padding: 50px 47px 0;
     }
 
+  }
+
+  .list-visual-list-item{
+
+    &:nth-child(1){ width: 100%; }
+    &:nth-child(2),
+    &:nth-child(3),
+    &:nth-child(4),
+    &:nth-child(5){ width: 50%; }
+
+  }
+
+  .footer{
+    font-size: 13px;
   }
 
 }
