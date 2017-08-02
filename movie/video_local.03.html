@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <link rel="stylesheet" href="css/reset.css"/>
+  <style>
+    html,body{
+      height: 100%;
+    }
+
+    .video-wrap{
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    .video{
+      width: 2204px;
+      height: 1200px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+    }
+
+    .dimmed{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #000;
+      opacity: 0.5;
+    }
+
+    .text{
+      width: 600px;
+      margin: 0 auto;
+      font-size: 20px;
+      line-height: 2;
+      position: relative;
+      z-index: 10;
+      color: #fff;
+    }
+
+    .bg-video{
+      width: 100%;
+      height: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 0;
+    }
+
+  </style>
+  <script src="js/lib/jquery-3.2.1.min.js"></script>
+  <script>
+
+    $(function(){
+
+      $(window).on('resize', function(){
+
+        var winWidth = $(window).width();
+        var winHeight = $(window).height();
+        var moveWidth;
+        var moveHeight;
+
+        moveWidth = winWidth * 1.5;
+        moveHeight = winHeight * 2;
+
+        $('.video').css({
+          width : moveWidth,
+          height : moveHeight,
+          'margin-top' : -(moveHeight / 2 ),
+          'margin-left' : -( moveWidth / 2 )
+        });
+
+      }).resize();
+
+    });
+
+
+
+  </script>
+</head>
+<body>
+
+<div class="bg-video">
+  <div class="video-wrap">
+    <video class="video" autoplay>
+      <source src="src/video1.mp4" type="video/mp4" />
+    </video>
+  </div>
+
+  <div class="dimmed"></div>
+</div>
+
+<div class="text">
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam animi beatae, consequuntur culpa eum illo maxime molestias neque odit officia officiis possimus quidem sit! Autem doloremque earum laboriosam porro totam?
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam animi beatae, consequuntur culpa eum illo maxime molestias neque odit officia officiis possimus quidem sit! Autem doloremque earum laboriosam porro totam?
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam animi beatae, consequuntur culpa eum illo maxime molestias neque odit officia officiis possimus quidem sit! Autem doloremque earum laboriosam porro totam?
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam animi beatae, consequuntur culpa eum illo maxime molestias neque odit officia officiis possimus quidem sit! Autem doloremque earum laboriosam porro totam?
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam animi beatae, consequuntur culpa eum illo maxime molestias neque odit officia officiis possimus quidem sit! Autem doloremque earum laboriosam porro totam?
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam animi beatae, consequuntur culpa eum illo maxime molestias neque odit officia officiis possimus quidem sit! Autem doloremque earum laboriosam porro totam?
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam animi beatae, consequuntur culpa eum illo maxime molestias neque odit officia officiis possimus quidem sit! Autem doloremque earum laboriosam porro totam?
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam animi beatae, consequuntur culpa eum illo maxime molestias neque odit officia officiis possimus quidem sit! Autem doloremque earum laboriosam porro totam?
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam animi beatae, consequuntur culpa eum illo maxime molestias neque odit officia officiis possimus quidem sit! Autem doloremque earum laboriosam porro totam?
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam animi beatae, consequuntur culpa eum illo maxime molestias neque odit officia officiis possimus quidem sit! Autem doloremque earum laboriosam porro totam?
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam animi beatae, consequuntur culpa eum illo maxime molestias neque odit officia officiis possimus quidem sit! Autem doloremque earum laboriosam porro totam?
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam animi beatae, consequuntur culpa eum illo maxime molestias neque odit officia officiis possimus quidem sit! Autem doloremque earum laboriosam porro totam?
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam animi beatae, consequuntur culpa eum illo maxime molestias neque odit officia officiis possimus quidem sit! Autem doloremque earum laboriosam porro totam?
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam animi beatae, consequuntur culpa eum illo maxime molestias neque odit officia officiis possimus quidem sit! Autem doloremque earum laboriosam porro totam?
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam animi beatae, consequuntur culpa eum illo maxime molestias neque odit officia officiis possimus quidem sit! Autem doloremque earum laboriosam porro totam?
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam animi beatae, consequuntur culpa eum illo maxime molestias neque odit officia officiis possimus quidem sit! Autem doloremque earum laboriosam porro totam?
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam animi beatae, consequuntur culpa eum illo maxime molestias neque odit officia officiis possimus quidem sit! Autem doloremque earum laboriosam porro totam?
+</div>
+
+</body>
+</html>
