@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Audio Player</title>
+  <style>
+    .btn{
+      display: block;
+      width: 139px;
+      height: 139px;
+      background: url("images/button.jpg")no-repeat -7px -478px;
+      text-indent: -99999em;
+      border: 0;
+    }
+
+    .btn.pause{
+      background-position: -170px -478px;
+    }
+  </style>
+  <script src="lib/jquery-3.2.1.min.js"></script>
+  <script>
+
+      /*
+      * 어떤 대상을 제어할 때 찾아야 할 것 3가지
+      *
+      * 1) 객체( object )
+      *
+      * 2) 함수( API )
+      *
+      * 3) 프로퍼티( 객체에 대한 정보 값 )
+      *
+      * */
+      $(function(){
+
+        function digit( time ){
+
+          var fixDigit;
+
+          if( time<10 ){
+            fixDigit = '0' + time;
+          } else{
+            fixDigit = time;
+          }
+          return fixDigit;
+        }
+
+        var $audio = $('.audio')[0];
+
+        $('.audio').on('loadedmetadata', function(){
+          console.log( $audio.duration );
+          console.log( Math.floor( $audio.duration / 60 ) + ':' + Math.floor( $audio.duration % 60 ) );
+        });
+
+        $('.audio').on('timeupdate', function(){
+          console.log( $audio.currentTime );
+          var time = digit( Math.floor( $audio.currentTime / 60 ) ) + ':' + digit(Math.floor( $audio.currentTime % 60 ) );
+          $('.currentTime').html( time );
+        });
+
+        $('.btn').data({'play' : false}).on('click', function(){
+
+          if( $(this).data('play') == false ){
+
+            $(this).removeClass('play').addClass('pause');
+            $audio.play();
+            $(this).data({'play' : true});
+
+          }else{
+
+          $(this).removeClass('pause').addClass('play');
+          $audio.pause();
+          $(this).data({'play' : false});
+          }
+        });
+
+      });
+  </script>
+</head>
+<body>
+
+
+<audio class="audio" controls>
+  <source src="audio/audio.mp3" type="audio/mpeg" />
+</audio>
+
+<div class="currentTime">00:00</div>
+
+<button type="button" class="btn play">play</button>
+
+</body>
+</html>

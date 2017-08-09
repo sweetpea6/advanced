@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Horizontal Scroll</title>
+  <link rel="stylesheet" href="reset.css" />
+  <style>
+    .container{
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      overflow: hidden;
+    }
+
+    .inner-box{
+      height: 125px;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .list{
+      white-space: nowrap;
+      position: absolute;
+      left: 0;
+    }
+
+    .list-item{
+      display: inline;
+      font-size: 125px;
+      padding: 0 100px;
+    }
+
+  </style>
+  <script src="lib/jquery-3.2.1.min.js"></script>
+  <script>
+    $(function(){
+
+      var scrollAmount = 0;
+
+      $(window).on('mousewheel', function(e){
+
+        scrollAmount += e.originalEvent.wheelDelta;
+
+        if( scrollAmount >= 0 ){
+          scrollAmount = 0;
+        }
+
+        if( scrollAmount <= -($('.list').width() - $(window).width() )){
+          scrollAmount = -($('.list').width() - $(window).width() );
+        }
+
+        console.log(scrollAmount);
+
+        $('.list').stop().animate({
+          left : scrollAmount
+        }, 300);
+
+        /*
+
+         **css 함수를 사용해서 구현하기
+         $(window).css(-scrollAmount/10);
+
+        */
+
+      });
+
+    });
+  </script>
+</head>
+<body>
+
+<div class="container">
+
+  <div class="inner-box">
+    <ul class="list">
+    <li class="list-item">TITLE</li>
+    <li class="list-item">TITLE</li>
+    <li class="list-item">TITLE</li>
+    <li class="list-item">TITLE</li>
+    <li class="list-item">TITLE</li>
+  </ul>
+  </div>
+
+</div>
+
+</body>
+</html>
