@@ -53,14 +53,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="popup_layer.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="popup_layer.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/popup_layer.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5471264">
+            <state vertical-scroll-proportion="-18.307692">
               <caret line="79" column="44" selection-start-line="79" selection-start-column="44" selection-end-line="79" selection-end-column="44" />
               <folding>
                 <element signature="n#style#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="lable.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/lable.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.11724138">
+              <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -81,6 +91,8 @@
         <option value="$PROJECT_DIR$/popup_content.html" />
         <option value="$PROJECT_DIR$/popup.html" />
         <option value="$PROJECT_DIR$/popup_layer.html" />
+        <option value="$PROJECT_DIR$/layble.html" />
+        <option value="$PROJECT_DIR$/lable.html" />
       </list>
     </option>
   </component>
@@ -148,7 +160,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../website_exercise/artwork" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../jongsori" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -206,7 +218,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="1" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24973656" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -272,11 +284,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/popup_layer.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5471264">
+        <state vertical-scroll-proportion="-18.307692">
           <caret line="79" column="44" selection-start-line="79" selection-start-column="44" selection-end-line="79" selection-end-column="44" />
           <folding>
             <element signature="n#style#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lable.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.11724138">
+          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+          <folding />
         </state>
       </provider>
     </entry>
