@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Carousel</title>
+  <style>
+    .container {
+      width: 300px;
+      height: 320px;
+      position: relative;
+      perspective: 1000px;
+      margin: 100px auto;
+    }
+
+    #carousel {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      transform-style: preserve-3d;
+      transition: transform 1s;
+      transform: translateZ(-520px);
+
+    }
+
+    #carousel figure {
+      margin: 0;
+      display: block;
+      position: absolute;
+      width: 274px;
+      height: 320px;
+      left: 13px;
+      /*top: 10px;*/
+      /*border: 2px solid black;*/
+      opacity: 0.5;
+      box-sizing: border-box;
+    }
+
+    #carousel figure:nth-child(1) {background: aqua; transform: rotateY(   0deg ) translateZ(520px); }
+    #carousel figure:nth-child(2) {background: aqua; transform: rotateY(  60deg ) translateZ(520px); }
+    #carousel figure:nth-child(3) {background: aqua; transform: rotateY(  120deg ) translateZ(520px); }
+    #carousel figure:nth-child(4) {background: aqua; transform: rotateY( 180deg ) translateZ(520px); }
+    #carousel figure:nth-child(5) {background: aqua; transform: rotateY( 240deg ) translateZ(520px); }
+    #carousel figure:nth-child(6) {background: aqua; transform: rotateY( 300deg ) translateZ(520px); }
+    /*#carousel figure:nth-child(7) {background: aqua; transform: rotateY( 240deg ) translateZ(520px); }*/
+    /*#carousel figure:nth-child(8) {background: aqua; transform: rotateY( 280deg ) translateZ(520px); }*/
+    /*#carousel figure:nth-child(9) {background: aqua; transform: rotateY( 320deg ) translateZ(520px); }*/
+  </style>
+
+  <script src="lib/jquery-3.2.1.min.js"></script>
+  <script>
+    $(function(){
+
+      var deltaDegree = 0;
+
+      $('.btn-prev').on('click', function(){
+
+        deltaDegree +=40;
+
+        $('#carousel').css({
+          transform : 'translateZ(-520px) rotateX(-15deg) rotateY(' + deltaDegree + 'deg)'
+        });
+
+      });
+
+      $('.btn-next').on('click', function(){
+
+        deltaDegree -=40;
+
+        $('#carousel').css({
+          transform : 'translateZ(-520px) rotateX(15deg) rotateY(' + deltaDegree + 'deg)'
+        });
+
+      });
+
+    });
+  </script>
+</head>
+<body>
+
+<section class="container">
+  <div id="carousel">
+    <figure>1</figure>
+    <figure>2</figure>
+    <figure>3</figure>
+    <figure>4</figure>
+    <figure>5</figure>
+    <figure>6</figure>
+    <!--<figure>7</figure>-->
+    <!--<figure>8</figure>-->
+    <!--<figure>9</figure>-->
+  </div>
+</section>
+
+<div>
+  <button type="button" class="btn-prev">prev</button>
+  <button type="button" class="btn-next">next</button>
+</div>
+
+</body>
+</html>
